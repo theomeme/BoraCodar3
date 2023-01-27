@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.primary {
+  --bg-default: #8257e5;
+  --bg-hover: #9674e5;
+}
+
+.secundary {
+  --bg-default: #3c3748;
+  --bg-hover: #6a617f;
+}
+
+.tertiary {
+  --bg-default: transparent;
+  --bg-hover: transparent;
+}
+
+body {
+  background: #130f1e;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  gap: 16px;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  /* h1 ja recebe por padrao esse peso de fonte */
+  /* font-weight: 700; */
+  
+  color: white;
+  font-size: 32px;
+}
+p {
+  margin-top: 8px;
+  font-family: 'Roboto', sans-serif;
+
+  /* por padrao a tag p ja recebe tamanho 400 */
+  /* font-weight: 400; */
+
+  color: #FFFFFF;
+  opacity: 0.67;
+}
+
+.buttons{
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+#app {
+  max-width: 460px;
+  padding-inline: 40px;
+}
+
+button {
+  justify-content: center;
+  font-family: "Inter";
+  background-color: var(--bg-default);
+  border: 0;
+  color: white;
+  /* Y     X */
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  background-color: var(--bg-hover);
+}
+
+button:focus {
+  outline: 2px solid #d9cdf7;
+}
+
+/* pseudo-selector */
+button:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+  background-color: var(--bg-default);
+}
+
+.loading {
+  cursor: progress;
+}
+
+.loading i {
+  font-size: 16px;
+  animation: spin 900ms infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.movable {
+  cursor: move;
+}
+
+.movable i {
+  font-size: 18px;
+}
